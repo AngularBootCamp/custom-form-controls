@@ -1,12 +1,10 @@
 <form>
-  <us-states-selector
+  <app-us-states-selector
     [formControl]="usStateSelector"
-  ></us-states-selector>
+  ></app-us-states-selector>
 </form>
 
-<section class="card">
-  <div class="card-content">
-    <div class="card-title">Form Control Value</div>
-    <pre>{{ usStateSelector.value | json }}</pre>
-  </div>
-</section>
+<article>
+  <header>Form Control Value</header>
+  <pre>{{ usStateSelector.value | json }}</pre>
+</article>

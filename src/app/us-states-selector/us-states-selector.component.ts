@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 import { usStates, UsStates } from './us-states';
 
 @Component({
-  selector: 'us-states-selector',
+  selector: 'app-us-states-selector',
   templateUrl: './us-states-selector.component.html',
   providers: [
     {
