@@ -1,8 +1,10 @@
+import { NgFor } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
 import {
   ControlValueAccessor,
   FormControl,
-  NG_VALUE_ACCESSOR
+  NG_VALUE_ACCESSOR,
+  ReactiveFormsModule
 } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
@@ -17,7 +19,9 @@ import { usStates, UsStates } from './us-states';
       useExisting: UsStatesSelectorComponent,
       multi: true
     }
-  ]
+  ],
+  standalone: true,
+  imports: [ReactiveFormsModule, NgFor]
 })
 export class UsStatesSelectorComponent
   implements ControlValueAccessor, OnDestroy
