@@ -6,8 +6,10 @@
     [formControl]="selectedState"
     (blur)="onTouched && onTouched()"
   >
-    <option [ngValue]="state" *ngFor="let state of usStates">
-      {{ state.State }}
-    </option>
+    @for (state of usStates; track state) {
+      <option [ngValue]="state">
+        {{ state.State }}
+      </option>
+    }
   </select>
 </div>
